@@ -15,8 +15,6 @@ class Constants {
     required Offset begin,
     required Offset end,
   }) {
-    begin = begin;
-    const end = Offset.zero;
     const curve = Curves.easeInOutQuart;
     var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
     var offsetAnimation = animation.drive(tween);
